@@ -1,15 +1,15 @@
 import React from 'react';
-import Image from "next/image";
 import { customButtonProps } from '@/types';
 
 const CustomButton = ({
   title, 
   containerStyles, 
-  handleClick
+  handleClick,
+  btnType
 }: customButtonProps) => {
   return (
     <button
-    type={"button"}
+    type={btnType || "button"}
     className={`custom-btn ${containerStyles}`}
     onClick={handleClick}
     >
