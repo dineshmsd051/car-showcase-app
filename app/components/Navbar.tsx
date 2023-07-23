@@ -1,6 +1,7 @@
+"use client";
 import Image from 'next/image'
 import Link from 'next/link'
-import CustomButton from './CustomButton'
+import { CustomButton } from './'
 
 const Navbar = () => {
 
@@ -15,7 +16,7 @@ const Navbar = () => {
           <Image src="/logo.svg" alt="Ms Cars logo" 
           width={118}
           height={18}
-          className='object-contain'
+          className="object-contain"
           />
         </Link>
         <CustomButton 
