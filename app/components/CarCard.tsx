@@ -23,7 +23,6 @@ const {
   year
 } = car;
 
-
   return (
     <div className="car-card group">
       <div className="car-card__content">
@@ -34,7 +33,7 @@ const {
 
       <p>
         <span>
-          
+
         </span>
       </p>
 
