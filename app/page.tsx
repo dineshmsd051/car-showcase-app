@@ -1,9 +1,17 @@
 import Image from 'next/image'
-import { CustomFilter, Hero, SearchBar } from './components'
+import { CarCard, CustomFilter, Hero, SearchBar } from './components'
+import fetchCars from '@/api';
 
-export default function Home() {
+
+export default async function Home() {
+
+  const allCars = await fetchCars();
+  
+  const isDataEmpty = !allCars || !Array.isArray(allCars) || allCars.length < 1
+
+
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <Hero />
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
@@ -20,7 +28,21 @@ export default function Home() {
           <CustomFilter title="fuel" />
           <CustomFilter title="fuel" />
         </div>
+
+        {isDataEmpty ? (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">Oops, no cars found!</h2>
+          </div>
+        ) : (
+          <div>
+            <div className="home__cars-wrapper">
+              {allCars?.map((car) => (
+                <CarCard car={car} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-    </main>
+    </div>
   );
 }
