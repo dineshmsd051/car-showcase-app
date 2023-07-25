@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { SearchManufacturer } from './';
 
 
-function SearchBar() {
+const SearchBar = () => {
 
   const [manufacturer, setManufacturer] = useState("")
 

@@ -1,5 +1,6 @@
+import React from 'react'
 
-function CustomFilter() {
+const CustomFilter = () => {
   return (
     <div>CustomFilter</div>
   )

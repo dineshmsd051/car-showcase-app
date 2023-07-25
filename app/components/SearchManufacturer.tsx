@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useState, Fragment } from "react";
 import { manufacturers } from "../constants";
 
-function SearchManufacturer({
+const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
-}: SearchManufacturerProps) {
+}: SearchManufacturerProps) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredManufacturesList =

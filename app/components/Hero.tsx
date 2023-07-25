@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { CustomButton } from './';
 
-function Hero() {
+const Hero = () => {
 
   const handleScroll = () => {
     
