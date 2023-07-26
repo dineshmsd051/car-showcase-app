@@ -5,6 +5,7 @@ import Image from "next/image";
 import CustomButton from "./CustomButton";
 import { useState } from "react";
 import { CarDetails } from "./";
+import { getCarImages } from "@/api";
 
 interface CarCardProps {
   car: CarProps;
@@ -47,7 +48,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={getCarImages(car)}
           fill
           priority
           className="object-contain"

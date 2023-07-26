@@ -1,6 +1,5 @@
-import Image from 'next/image'
 import { CarCard, CustomFilter, Hero, SearchBar } from './components'
-import fetchCars from '@/api';
+import { fetchCars } from '@/api';
 
 
 export default async function Home() {

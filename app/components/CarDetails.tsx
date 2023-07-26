@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { CarDetailsProps } from "@/types";
 import { Dialog, Transition } from "@headlessui/react";
+import { getCarImages } from "@/api";
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
   return (
@@ -53,7 +54,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src="/hero.png"
+                        src={getCarImages(car)}
                         alt="car-showcase-img"
                         fill
                         priority
@@ -64,7 +65,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="relative flex-1 w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={getCarImages(car, 29)}
                           alt="car-showcase-img"
                           fill
                           priority
@@ -73,7 +74,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="relative flex-1 w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={getCarImages(car, 33)}
                           alt="car-showcase-img"
                           fill
                           priority
@@ -82,7 +83,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       </div>
                       <div className="relative flex-1 w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={getCarImages(car, 13)}
                           alt="car-showcase-img"
                           fill
                           priority
