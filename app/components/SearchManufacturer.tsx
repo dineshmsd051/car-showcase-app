@@ -25,14 +25,6 @@ const SearchManufacturer = ({
     <div className="search-manufacturer">
       <Combobox>
         <div className="relative w-full">
-          <Combobox.Input
-            className="search-manufacturer__input"
-            placeholder="Search a car"
-            displayValue={(manufacturer: string) => {
-              return manufacturer;
-            }}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
           <Combobox.Button className="absolute top-[14px]">
             <Image
               src="/car-logo.svg"
@@ -42,6 +34,14 @@ const SearchManufacturer = ({
               alt="car-logo"
             />
           </Combobox.Button>
+          <Combobox.Input
+            className="search-manufacturer__input"
+            placeholder="Search a car"
+            displayValue={(manufacturer: string) => {
+              return manufacturer;
+            }}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
 
           <Transition
             as={Fragment}
@@ -74,8 +74,7 @@ const SearchManufacturer = ({
                           className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
                             active ? "text-white" : "text-teal-600"
                           }`}
-                        >
-                        </span>
+                        ></span>
                       ) : null}
                     </>
                   )}
