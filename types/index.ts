@@ -43,3 +43,14 @@ export interface FilterProps {
   limit: number;
   model: string;
 }
+
+
+export interface FilterOptionProps {
+  fuels: string,
+  yearsOfProduction: number
+}
+
+export interface CustomFilterProps {
+  title: string,
+  options: FilterOptionProps[]
+}
