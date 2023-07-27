@@ -13,7 +13,6 @@ const CustomFilter = ( { title, options} : CustomFilterProps  ) => {
 
   const updateSearchParams = (e: {title: string, value: string}) => {
     const searchParams = new URLSearchParams(window.location.search);
-    console.log('e', e)
     const { title, value } = e;
 
     if (value) {
