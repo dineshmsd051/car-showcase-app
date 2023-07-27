@@ -47,6 +47,7 @@ const SearchBar = () => {
     } else {
       searchParams.delete('model')
     }
+
     if (manufacturer) {
       searchParams.set("manufacturer", manufacturer);
     } else {
@@ -66,7 +67,6 @@ const SearchBar = () => {
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        <SearchButton />
       </div>
       <br />
       <div className="searchbar__item">
@@ -82,7 +82,7 @@ const SearchBar = () => {
           name="model"
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder="Tiguan"
+          placeholder="Car model"
           className="search-manufacturer__input"
         />
         <SearchButton />

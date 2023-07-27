@@ -23,7 +23,7 @@ const SearchManufacturer = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
@@ -36,7 +36,7 @@ const SearchManufacturer = ({
           </Combobox.Button>
           <Combobox.Input
             className="search-manufacturer__input"
-            placeholder="Search a car"
+            placeholder="Car name"
             displayValue={(manufacturer: string) => {
               return manufacturer;
             }}

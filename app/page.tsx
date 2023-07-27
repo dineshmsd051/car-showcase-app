@@ -27,16 +27,16 @@ export default async function Home( { searchParams } ) {
 
         <div className="home__filters">
           <SearchBar />
+          <div className="home__filter-container">
+            <CustomFilter title="fuel" />
+            <CustomFilter title="fuel" />
+          </div>
         </div>
-
-        <div className="home__filter-container">
-          <CustomFilter title="fuel" />
-          <CustomFilter title="fuel" />
-        </div>
-
         {isDataEmpty ? (
           <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold">Oops, no cars found!</h2>
+            <h2 className="text-black text-xl font-bold">
+              Oops, no cars found!
+            </h2>
           </div>
         ) : (
           <div>
